@@ -17,6 +17,7 @@
 		A5D796BD132A30290054DF4A /* JSConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D796BC132A30290054DF4A /* JSConsole.m */; };
 		A5EFF4B512B91F4200A4AF20 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFF4B412B91F4200A4AF20 /* WebKit.framework */; };
 		A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EFF4D312B921C500A4AF20 /* MainMenu.xib */; };
+		C11BCE401C8834D700B78DA9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C11BCE3F1C8834D700B78DA9 /* icon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		A5D796BC132A30290054DF4A /* JSConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSConsole.m; sourceTree = "<group>"; };
 		A5EFF4B412B91F4200A4AF20 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A5EFF4D312B921C500A4AF20 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		C11BCE3F1C8834D700B78DA9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C11BCE3F1C8834D700B78DA9 /* icon.icns */,
 				A5EFF4D312B921C500A4AF20 /* MainMenu.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */,
@@ -189,6 +192,7 @@
 			files = (
 				A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */,
 				A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */,
+				C11BCE401C8834D700B78DA9 /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
