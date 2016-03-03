@@ -1,7 +1,9 @@
 IRCCloud
 ============
 
-Standalone irccloud.com client for OS X
+Standalone irccloud.com client for OS X. A fork of
+https://github.com/jnordberg/irccloudapp started to fix broken notifications in
+notification center.
 
 FEATURES
 --------
