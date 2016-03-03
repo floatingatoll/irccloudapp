@@ -1,6 +1,6 @@
 //
 //  NotificationProvider.h
-//  nimbus
+//  irccloud
 //
 //  Created by Johan Nordberg on 2012-10-27.
 //  Copyright 2012 FFFF00 Agents AB. All rights reserved.
@@ -68,11 +68,8 @@ NSString *notificationKey(WebNotification *notification) {
 
 - (void)cancelNotification:(WebNotification *)webNotification {
   NSString *key = notificationKey(webNotification);
-  NSUserNotification *userNotification = [_userNotifications valueForKey:key];
   
   [webNotification dispatchCloseEvent];
-
-  if (userNotification) [_notificationCenter removeDeliveredNotification:userNotification];
 
   [_webNotifications removeObjectForKey:key];
   [_userNotifications removeObjectForKey:key];

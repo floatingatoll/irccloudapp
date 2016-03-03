@@ -10,9 +10,9 @@
 @synthesize window, webView;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification { 
-  [webView setFrameLoadDelegate:self];
-  [webView setPolicyDelegate:self];
-  [webView setUIDelegate:self];
+  [webView setFrameLoadDelegate:(id)self];
+  [webView setPolicyDelegate:(id)self];
+  [webView setUIDelegate:(id)self];
 
   // webview -> notification center bridge
   notificationProvider = [[NotificationProvider alloc] init];
@@ -20,7 +20,7 @@
 
   // user agent
   NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-  [webView setApplicationNameForUserAgent:[NSString stringWithFormat:@"nimbus/%@", version]];
+  [webView setApplicationNameForUserAgent:[NSString stringWithFormat:@"irccloud/%@", version]];
 
   // listen for title changes
   [webView addObserver:self
@@ -47,7 +47,7 @@
 - (void)loadUserScripts {
   NSFileManager *fileManager = [NSFileManager defaultManager];
 
-  NSString *folder = @"~/Library/Application Support/nimbus/Scripts/";
+  NSString *folder = @"~/Library/Application Support/irccloud/Scripts/";
   folder = [folder stringByExpandingTildeInPath];
 
   if ([fileManager fileExistsAtPath:folder] == NO) {
@@ -158,7 +158,7 @@
 }
 
 - (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Nimbus" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"%@", message];
+    NSAlert *alert = [NSAlert alertWithMessageText:@"irccloud" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"%@", message];
     [alert runModal];
 }
 

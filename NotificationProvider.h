@@ -1,6 +1,6 @@
 //
 //  NotificationProvider.h
-//  nimbus
+//  irccloud
 //
 //  Created by Johan Nordberg on 2012-10-27.
 //  Copyright 2012 FFFF00 Agents AB. All rights reserved.
