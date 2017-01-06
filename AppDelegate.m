@@ -133,9 +133,16 @@
         return;
     }
 
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Unable to connect to IRCCloud" defaultButton:@"Retry" alternateButton:@"Quit" otherButton:nil informativeTextWithFormat:@"Check your internet connection."];
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    [alert addButtonWithTitle:@"Retry"];
+    [alert addButtonWithTitle:@"Quit"];
+    NSArray *buttons = [alert buttons];
+    [[buttons objectAtIndex:0] setKeyEquivalent:@"\r"];
+    [[buttons objectAtIndex:1] setKeyEquivalent:@"\033"];
+    [alert setMessageText:@"Unable to connect to IRCCloud"];
+    [alert setInformativeText:@"Check your internet connection."];
     [alert beginSheetModalForWindow:window completionHandler:^(NSModalResponse responseCode) {
-        if (responseCode == NSModalResponseOK) {
+        if (responseCode == NSAlertFirstButtonReturn) {
             [view setMainFrameURL:url];
         } else {
             [NSApp stop:self];
@@ -163,12 +170,24 @@
 #pragma mark WebUIDelegate
 
 - (BOOL)webView:(WebView *)sender runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Please confirm" defaultButton:@"Yes" alternateButton:@"No" otherButton:nil informativeTextWithFormat:@"%@", message];
-    return [alert runModal] == NSAlertDefaultReturn;
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    [alert addButtonWithTitle:@"Yes"];
+    [alert addButtonWithTitle:@"No"];
+    NSArray *buttons = [alert buttons];
+    [[buttons objectAtIndex:0] setKeyEquivalent:@"\r"];
+    [[buttons objectAtIndex:1] setKeyEquivalent:@"\033"];
+    [alert setMessageText:@"Please confirm"];
+    [alert setInformativeText:message];
+    return [alert runModal] == NSAlertFirstButtonReturn;
 }
 
 - (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"irccloud" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"%@", message];
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    [alert addButtonWithTitle:@"Ok"];
+    NSArray *buttons = [alert buttons];
+    [[buttons objectAtIndex:0] setKeyEquivalent:@"\r"];
+    [alert setMessageText:@"irccloud"];
+    [alert setInformativeText:message];
     [alert runModal];
 }
 
@@ -182,7 +201,7 @@
     [openDlg setCanChooseFiles:YES];
     [openDlg setCanChooseDirectories:NO];
     
-    if ([openDlg runModal] == NSOKButton) {
+    if ([openDlg runModal] == NSModalResponseOK) {
         NSArray* files = [[openDlg URLs] valueForKey:@"relativePath"];
         [resultListener chooseFilenames:files];
     }
