@@ -10,14 +10,15 @@
 		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		A5253353131FC279005FDAAF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; };
-		A525335C131FC287005FDAAF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */; };
+		A544EA2E1E0557030059F92D /* digit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A544EA2D1E0557030059F92D /* digit.mp3 */; };
+		A544EA321E055A1E0059F92D /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = A544EA311E055A1E0059F92D /* Application.xib */; };
+		A544EA351E0565F10059F92D /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A544EA331E0565670059F92D /* Sparkle.framework */; };
+		A544EA361E05662F0059F92D /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A544EA331E0565670059F92D /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5454E4712BBAB9100186603 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A5454E4612BBAB9100186603 /* Icon.icns */; };
 		A588F3F3163C00A6002896F9 /* NotificationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A588F3F2163C00A6002896F9 /* NotificationProvider.m */; };
 		A5D796BD132A30290054DF4A /* JSConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D796BC132A30290054DF4A /* JSConsole.m */; };
 		A5EFF4B512B91F4200A4AF20 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFF4B412B91F4200A4AF20 /* WebKit.framework */; };
-		A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EFF4D312B921C500A4AF20 /* MainMenu.xib */; };
-		C11BCE401C8834D700B78DA9 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C11BCE3F1C8834D700B78DA9 /* icon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A525335C131FC287005FDAAF /* Sparkle.framework in Copy Frameworks */,
+				A544EA361E05662F0059F92D /* Sparkle.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,16 +45,17 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* IRCCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRCCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5253352131FC279005FDAAF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = irccloudapp_pub.pem; sourceTree = "<group>"; };
+		A544EA2D1E0557030059F92D /* digit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = digit.mp3; sourceTree = "<group>"; };
+		A544EA311E055A1E0059F92D /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
+		A544EA331E0565670059F92D /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		A5454E4612BBAB9100186603 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		A588F3F1163C00A6002896F9 /* NotificationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationProvider.h; sourceTree = "<group>"; };
 		A588F3F2163C00A6002896F9 /* NotificationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationProvider.m; sourceTree = "<group>"; };
 		A588F3F5163C013D002896F9 /* WebNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebNotification.h; sourceTree = "<group>"; };
 		A5D796BB132A30290054DF4A /* JSConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSConsole.h; sourceTree = "<group>"; };
 		A5D796BC132A30290054DF4A /* JSConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSConsole.m; sourceTree = "<group>"; };
 		A5EFF4B412B91F4200A4AF20 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		A5EFF4D312B921C500A4AF20 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		C11BCE3F1C8834D700B78DA9 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				A5EFF4B512B91F4200A4AF20 /* WebKit.framework in Frameworks */,
-				A5253353131FC279005FDAAF /* Sparkle.framework in Frameworks */,
+				A544EA351E0565F10059F92D /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +118,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C11BCE3F1C8834D700B78DA9 /* icon.icns */,
-				A5EFF4D312B921C500A4AF20 /* MainMenu.xib */,
+				A544EA311E055A1E0059F92D /* Application.xib */,
+				A544EA2D1E0557030059F92D /* digit.mp3 */,
+				A5454E4612BBAB9100186603 /* Icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */,
 			);
@@ -127,11 +130,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A544EA331E0565670059F92D /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				A5EFF4B412B91F4200A4AF20 /* WebKit.framework */,
-				A5253352131FC279005FDAAF /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,7 +167,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "irccloud" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -190,7 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */,
+				A544EA2E1E0557030059F92D /* digit.mp3 in Resources */,
+				A544EA321E055A1E0059F92D /* Application.xib in Resources */,
+				A5454E4712BBAB9100186603 /* Icon.icns in Resources */,
 				A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */,
 				C11BCE401C8834D700B78DA9 /* icon.icns in Resources */,
 			);
@@ -216,11 +221,14 @@
 		A5B7231F163EBD4E006B0E72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -247,13 +255,15 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = .;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowagents.${PRODUCT_NAME:rfc1034identifier}";
@@ -269,13 +279,15 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = .;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yellowagents.${PRODUCT_NAME:rfc1034identifier}";
@@ -286,11 +298,14 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

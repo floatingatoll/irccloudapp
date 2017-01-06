@@ -42,6 +42,13 @@
   [webView setMainFrameURL:url];
 }
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
+  if (flag == NO) {
+    [window makeKeyAndOrderFront:self];
+  }
+  return YES;
+}
+
 #pragma mark -
 
 - (void)loadUserScripts {
@@ -108,6 +115,9 @@
 
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowScriptObject forFrame:(WebFrame *)frame {
   [windowScriptObject setValue:console forKey:@"console"];
+    
+  // disable notification sound
+  [windowScriptObject evaluateWebScript:@"HTMLAudioElement.prototype.play = function(){}"];
 
   // inject userscripts
   for (NSString *script in userScripts) {
